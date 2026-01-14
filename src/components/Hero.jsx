@@ -39,6 +39,27 @@ export default function Hero() {
     return () => clearInterval(wordTimer);
   }, []);
 
+
+  const socialLinks = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/Gaurav-Jaiswal-1',
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/gaurav-jaiswal-7004b025a/',
+  },
+  {
+    name: 'Twitter',
+    url: 'https://x.com/gaurav_jai81267',
+  },
+  {
+    name: 'Medium',
+    url: 'https://medium.com/@jaiswalgaurav863',
+  },
+];
+
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-gradient-radial from-cyan-500/10 via-transparent to-transparent opacity-50" />
@@ -95,7 +116,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-gray-400 text-lg max-w-2xl mx-auto mb-12"
         >
-          Building production-grade AI systems that transform data into actionable intelligence. 95%+ accuracy. 80% efficiency gains.
+          Building production-grade AI systems that convert complex data into reliable, real-world insights, with a strong focus on accuracy, efficiency, and practical deployment.
         </motion.p>
 
         <motion.div
@@ -136,16 +157,19 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1 }}
           className="flex justify-center gap-6 mb-12"
         >
-          {['GitHub', 'LinkedIn', 'Twitter', 'Medium'].map((social, i) => (
+          {socialLinks.map((social) => (
             <motion.a
-              key={social}
-              href="#"
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1, color: '#00d9ff' }}
               className="text-gray-500 hover:text-cyan-400 text-sm font-medium transition-colors"
             >
-              {social}
+              {social.name}
             </motion.a>
           ))}
+
         </motion.div>
 
         <motion.div
