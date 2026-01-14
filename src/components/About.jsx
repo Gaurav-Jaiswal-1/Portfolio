@@ -4,13 +4,15 @@
 import { motion } from 'framer-motion';
 import { portfolioData } from '../components/data/Portfolio';
 import { Brain, Code2, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
-  const stats = [
-    { icon: Code2, label: 'ML Models', value: '5+' },
-    { icon: Brain, label: 'AI Projects', value: '10+' },
-    { icon: Zap, label: 'Peak Accuracy', value: '95%+' },
-  ];
+const stats = [
+  { icon: Code2, label: 'Production Pipelines', value: '3+' },
+  { icon: Brain, label: 'AI', value: '8+' },
+  { icon: Zap, label: 'PyPI Downloads', value: '13k+' },
+];
+
 
   return (
     <section id="about" className="relative py-24 px-6">
@@ -35,15 +37,20 @@ export default function About() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <p className="text-cyan-400 font-semibold">AI Engineer</p>
-                </div>
+            <div className="relative w-full max-w-sm mx-auto aspect-[3/4] rounded-2xl overflow-hidden border border-cyan-500/30 group bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                
+                <Image
+                  src="/me.jpg"
+                  alt="Gaurav Jaiswal - AI Engineer"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity" />
               </div>
-            </div>
+
           </motion.div>
 
           <motion.div

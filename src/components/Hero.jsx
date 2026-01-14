@@ -104,12 +104,30 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <button className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
-            View My Work
-          </button>
-          <button className="px-8 py-3 rounded-full border border-cyan-500/50 text-cyan-400 font-semibold hover:bg-cyan-500/10 transition-all">
+        <button
+          onClick={() => {
+            const section = document.getElementById('experience');
+            if (section) {
+              section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          }}
+          className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
+        >
+          View My Work
+        </button>
+
+
+          <a
+            href="https://drive.google.com/uc?export=download&id=1-Ooani0s-FwpZZ46wIAN4GURd23Cjn35"
+            className="px-8 py-3 rounded-full border border-cyan-500/50 text-cyan-400 font-semibold hover:bg-cyan-500/10 transition-all"
+          >
             Download Resume
-          </button>
+          </a>
+
+
         </motion.div>
 
         <motion.div

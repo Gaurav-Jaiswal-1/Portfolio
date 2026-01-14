@@ -5,9 +5,9 @@ import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 export default function Footer() {
   const socials = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: Github, href: 'https://github.com/Gaurav-Jaiswal-1', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/gaurav-jaiswal-7004b025a/', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://x.com/gaurav_jai81267', label: 'Twitter' },
     { icon: Mail, href: 'mailto:jaiswalgaurav863@gmail.com', label: 'Email' },
   ];
 

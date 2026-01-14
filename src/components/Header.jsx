@@ -44,14 +44,18 @@ export default function Header() {
             ))}
           </div>
 
-          <motion.button
+          <motion.a
+            href="https://drive.google.com/file/d/1-Ooani0s-FwpZZ46wIAN4GURd23Cjn35/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             className="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
           >
             Resume
-          </motion.button>
+          </motion.a>
+
 
           <button
             onClick={() => setIsOpen(!isOpen)}
